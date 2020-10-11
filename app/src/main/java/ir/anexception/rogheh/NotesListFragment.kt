@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.Navigation
 import androidx.navigation.findNavController
 import ir.anexception.rogheh.databinding.FragmentNotesListBinding
 
@@ -18,9 +19,9 @@ class NotesListFragment : Fragment() {
         // Inflate the layout for this fragment
         val binding: FragmentNotesListBinding =
             DataBindingUtil.inflate(inflater, R.layout.fragment_notes_list, container, false)
-        binding.noteButton.setOnClickListener { view: View ->
-            view.findNavController().navigate(R.id.action_notesListFragment_to_noteFragment)
-        }
+        binding.noteButton.setOnClickListener (
+            Navigation.createNavigateOnClickListener(R.id.action_notesListFragment_to_noteFragment)
+        )
         return binding.root
     }
 
