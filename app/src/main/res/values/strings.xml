@@ -6,4 +6,7 @@
     <string name="edit_note">ویرایش</string>
     <string name="remove_note">حذف</string>
     <string name="share_note">به اشتراک‌گذاری</string>
+    <string name="notes">رقعه‌ها</string>
+    <string name="about">درباره برنامه</string>
+    <string name="about_app">درباره برنامه</string>
 </resources>
