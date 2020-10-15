@@ -2,4 +2,7 @@
     <string name="app_name">Rogheh</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">This is notes list fragment</string>
+    <string name="copy_note">رونوشت</string>
+    <string name="edit_note">ویرایش</string>
+    <string name="remove_note">حذف</string>
 </resources>
