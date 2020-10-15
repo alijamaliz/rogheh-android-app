@@ -5,9 +5,14 @@ import android.util.Log
 import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.fragment.navArgs
 import ir.anexception.rogheh.databinding.FragmentNoteBinding
 
 class NoteFragment : Fragment() {
+
+    val args: NoteFragmentArgs by navArgs()
+
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -15,6 +20,8 @@ class NoteFragment : Fragment() {
         // Inflate the layout for this fragment
         val binding: FragmentNoteBinding =
             DataBindingUtil.inflate(inflater, R.layout.fragment_note, container, false)
+
+        binding.noteText.text = "This is ${args.noteId} note!"
 
         setHasOptionsMenu(true);
 

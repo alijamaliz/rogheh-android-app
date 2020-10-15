@@ -20,7 +20,7 @@ class NotesListFragment : Fragment() {
         val binding: FragmentNotesListBinding =
             DataBindingUtil.inflate(inflater, R.layout.fragment_notes_list, container, false)
         binding.noteButton.setOnClickListener (
-            Navigation.createNavigateOnClickListener(R.id.action_notesListFragment_to_noteFragment)
+            Navigation.createNavigateOnClickListener(NotesListFragmentDirections.actionNotesListFragmentToNoteFragment(5))
         )
         return binding.root
     }

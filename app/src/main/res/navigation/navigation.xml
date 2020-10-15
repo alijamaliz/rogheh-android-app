@@ -14,5 +14,9 @@
     <fragment
         android:id="@+id/noteFragment2"
         android:name="ir.anexception.rogheh.NoteFragment"
-        android:label="NoteFragment" />
+        android:label="NoteFragment" >
+        <argument
+            android:name="noteId"
+            app:argType="integer" />
+    </fragment>
 </navigation>
