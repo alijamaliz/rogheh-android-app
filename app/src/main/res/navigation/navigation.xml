@@ -19,4 +19,8 @@
             android:name="noteId"
             app:argType="integer" />
     </fragment>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="ir.anexception.rogheh.AboutFragment"
+        android:label="AboutFragment" />
 </navigation>
