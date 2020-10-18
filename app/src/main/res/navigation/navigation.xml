@@ -6,7 +6,7 @@
     <fragment
         android:id="@+id/notesListFragment"
         android:name="ir.anexception.rogheh.NotesListFragment"
-        android:label="NotesListFragment" >
+        android:label="رقعه‌ها">
         <action
             android:id="@+id/action_notesListFragment_to_noteFragment"
             app:destination="@id/noteFragment2"
@@ -16,7 +16,7 @@
     <fragment
         android:id="@+id/noteFragment2"
         android:name="ir.anexception.rogheh.NoteFragment"
-        android:label="NoteFragment" >
+        android:label="رقعه" >
         <argument
             android:name="noteId"
             app:argType="integer" />
@@ -24,5 +24,5 @@
     <fragment
         android:id="@+id/aboutFragment"
         android:name="ir.anexception.rogheh.AboutFragment"
-        android:label="AboutFragment" />
+        android:label="درباره رقعه" />
 </navigation>
