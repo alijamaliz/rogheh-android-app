@@ -28,7 +28,11 @@ class NoteFragment : Fragment() {
             DataBindingUtil.inflate(inflater, R.layout.fragment_note, container, false)
 
         val noteId = args.noteId
-        binding.noteText.text = model.getNoteText()
+
+        model.noteText.observe(this, { newNoteText ->
+            binding.noteText.text = newNoteText
+        })
+
 
         setHasOptionsMenu(true);
 
