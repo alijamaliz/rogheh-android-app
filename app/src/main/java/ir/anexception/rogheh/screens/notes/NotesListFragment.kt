@@ -1,4 +1,4 @@
-package ir.anexception.rogheh
+package ir.anexception.rogheh.screens.notes
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,7 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.Navigation
-import androidx.navigation.findNavController
+import ir.anexception.rogheh.screens.notes.NotesListFragmentDirections
+import ir.anexception.rogheh.R
 import ir.anexception.rogheh.databinding.FragmentNotesListBinding
 
 class NotesListFragment : Fragment() {
@@ -20,7 +21,11 @@ class NotesListFragment : Fragment() {
         val binding: FragmentNotesListBinding =
             DataBindingUtil.inflate(inflater, R.layout.fragment_notes_list, container, false)
         binding.noteButton.setOnClickListener (
-            Navigation.createNavigateOnClickListener(NotesListFragmentDirections.actionNotesListFragmentToNoteFragment(5))
+            Navigation.createNavigateOnClickListener(
+                NotesListFragmentDirections.actionNotesListFragmentToNoteFragment(
+                    5
+                )
+            )
         )
         return binding.root
     }

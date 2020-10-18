@@ -1,12 +1,13 @@
-package ir.anexception.rogheh
+package ir.anexception.rogheh.screens.note
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.fragment.navArgs
+import ir.anexception.rogheh.screens.note.NoteFragmentArgs
+import ir.anexception.rogheh.R
 import ir.anexception.rogheh.databinding.FragmentNoteBinding
 
 class NoteFragment : Fragment() {
