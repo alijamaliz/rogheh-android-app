@@ -16,4 +16,8 @@ class NoteViewModel(private val noteId: Int) : ViewModel() {
     }
 
     fun getNote() {}
+
+    fun generateNote() {
+        _noteText.value = (_noteText.value)?.substring(3) + _noteText.value
+    }
 }

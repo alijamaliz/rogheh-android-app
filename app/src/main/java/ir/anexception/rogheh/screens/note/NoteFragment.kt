@@ -28,10 +28,8 @@ class NoteFragment : Fragment() {
         val noteId = args.noteId
         val model: NoteViewModel by viewModels { NoteViewModelFactory(noteId) }
 
-        model.noteText.observe(this, { newNoteText ->
-            binding.noteText.text = newNoteText
-        })
-
+        binding.noteViewModel = model
+        binding.lifecycleOwner = this
 
         setHasOptionsMenu(true);
 
