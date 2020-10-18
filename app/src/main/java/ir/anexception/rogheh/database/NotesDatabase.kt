@@ -8,7 +8,7 @@ import androidx.room.RoomDatabase
 @Database(entities = [Note::class], version = 1, exportSchema = false)
 abstract class NotesDatabase : RoomDatabase() {
 
-    abstract val noteDatabaseDao: NotesDatabaseDao
+    abstract val notesDatabaseDao: NotesDatabaseDao
 
     companion object {
 
