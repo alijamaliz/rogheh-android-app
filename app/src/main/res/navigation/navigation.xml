@@ -15,7 +15,7 @@
     </fragment>
     <fragment
         android:id="@+id/noteFragment2"
-        android:name="ir.anexception.rogheh.screens.note.NoteFragment"
+        android:name="ir.anexception.rogheh.screens.editor.EditorFragment"
         android:label="رقعه" >
         <argument
             android:name="noteId"

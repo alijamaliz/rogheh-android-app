@@ -1,14 +1,12 @@
-package ir.anexception.rogheh.screens.note
+package ir.anexception.rogheh.screens.editor
 
 import android.app.Application
-import android.util.Log
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
 import ir.anexception.rogheh.database.NotesDatabaseDao
 
-class NoteViewModel(
+class EditorViewModel(
     private val dataSource: NotesDatabaseDao,
     application: Application,
     private val noteId: Int

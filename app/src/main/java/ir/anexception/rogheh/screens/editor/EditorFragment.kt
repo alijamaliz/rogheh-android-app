@@ -1,4 +1,4 @@
-package ir.anexception.rogheh.screens.note
+package ir.anexception.rogheh.screens.editor
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,14 +7,13 @@ import androidx.fragment.app.Fragment
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.navArgs
-import ir.anexception.rogheh.screens.note.NoteFragmentArgs
 import ir.anexception.rogheh.R
 import ir.anexception.rogheh.database.NotesDatabase
-import ir.anexception.rogheh.databinding.FragmentNoteBinding
+import ir.anexception.rogheh.databinding.FragmentEditorBinding
 
-class NoteFragment : Fragment() {
+class EditorFragment : Fragment() {
 
-    val args: NoteFragmentArgs by navArgs()
+    val args: EditorFragmentArgs by navArgs()
 
 
     override fun onCreateView(
@@ -23,15 +22,15 @@ class NoteFragment : Fragment() {
     ): View? {
 
         // Inflate the layout for this fragment
-        val binding: FragmentNoteBinding =
-            DataBindingUtil.inflate(inflater, R.layout.fragment_note, container, false)
+        val binding: FragmentEditorBinding =
+            DataBindingUtil.inflate(inflater, R.layout.fragment_editor, container, false)
 
         val application = requireNotNull(this.activity).application
         val dataSource = NotesDatabase.getInstance(application).notesDatabaseDao
         val noteId = args.noteId
 
-        val model: NoteViewModel by viewModels {
-            NoteViewModelFactory(
+        val model: EditorViewModel by viewModels {
+            EditorViewModelFactory(
                 dataSource,
                 application,
                 noteId
