@@ -21,13 +21,12 @@ class NoteFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        val model: NoteViewModel by viewModels()
-
         // Inflate the layout for this fragment
         val binding: FragmentNoteBinding =
             DataBindingUtil.inflate(inflater, R.layout.fragment_note, container, false)
 
         val noteId = args.noteId
+        val model: NoteViewModel by viewModels { NoteViewModelFactory(noteId) }
 
         model.noteText.observe(this, { newNoteText ->
             binding.noteText.text = newNoteText

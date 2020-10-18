@@ -1,10 +1,11 @@
 package ir.anexception.rogheh.screens.note
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class NoteViewModel : ViewModel() {
+class NoteViewModel(private val noteId: Int) : ViewModel() {
 
     private var _noteText = MutableLiveData<String>()
     val noteText: LiveData<String>
