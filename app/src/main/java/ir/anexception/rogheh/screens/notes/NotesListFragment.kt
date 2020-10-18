@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.viewModels
 import androidx.navigation.Navigation
 import ir.anexception.rogheh.screens.notes.NotesListFragmentDirections
 import ir.anexception.rogheh.R
@@ -18,6 +19,9 @@ class NotesListFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
+
+        val model:  NotesViewModel by viewModels()
+
         val binding: FragmentNotesListBinding =
             DataBindingUtil.inflate(inflater, R.layout.fragment_notes_list, container, false)
         binding.noteButton.setOnClickListener (
