@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.navArgs
 import ir.anexception.rogheh.screens.note.NoteFragmentArgs
 import ir.anexception.rogheh.R
@@ -19,11 +20,15 @@ class NoteFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
+        val model: NoteViewModel by viewModels()
+
         // Inflate the layout for this fragment
         val binding: FragmentNoteBinding =
             DataBindingUtil.inflate(inflater, R.layout.fragment_note, container, false)
 
-        binding.noteText.text = "This is ${args.noteId} note!"
+        val noteId = args.noteId
+        binding.noteText.text = model.getNoteText()
 
         setHasOptionsMenu(true);
 
